@@ -9,15 +9,18 @@ class TodoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        useMaterial3: true,
-        textTheme: TextTheme(
-          headlineSmall: GoogleFonts.montserrat(
-            fontSize:24,
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFFFF9900),
+            primary: const Color(0xFFFF9900),
+            surface: const Color(0xFFEDEDED),
+          ),
+          textTheme: TextTheme(
+              headlineSmall: GoogleFonts.montserrat(
+            fontSize: 24,
             height: 32 / 24,
             fontWeight: FontWeight.bold,
-          )
-        )
-      ),
+          ))),
       home: const TodoListPage(),
     );
   }
